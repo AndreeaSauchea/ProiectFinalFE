@@ -1,0 +1,51 @@
+body {
+    background-color: black;
+    margin: 10;
+}
+
+header {
+    padding: 10px;
+    min-height: 48px;
+    background-color: white;
+}
+
+p {
+    text-indent: 15px;
+    color: rgb(223, 147, 6);
+}
+
+h1{
+    color: rgb(223, 147, 6);
+}
+
+h2{
+    color: rgb(223, 147, 6);
+}
+
+h3{
+    color: rgb(223, 147, 6);
+}
+
+h4{
+    color: rgb(223, 147, 6);
+}
+
+h5{
+    color: rgb(223, 147, 6);
+}
+
+h6{
+    color: rgb(223, 147, 6);
+}
+
+  
+footer {
+    text-align: center;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    background-color: #3b8dbd;
+    color: #ffffff;
+    font-size: 0.9em;
+    padding: 8px;
+}
