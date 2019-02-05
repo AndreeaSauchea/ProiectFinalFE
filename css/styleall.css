@@ -19,3 +19,7 @@
     bottom: 0;
     position: fixed;
 }
+
+html {
+    background-color: black;
+}

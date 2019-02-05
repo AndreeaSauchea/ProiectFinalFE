@@ -2,16 +2,15 @@
 <html lang="en" style="background-color: black">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Home</title>
     <link rel="stylesheet" type="text/css" href="css/homepage.css">
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/styleall.css">
     <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css"/>
 </head>
-<body>
+<body id="bootstrap-overrides">
     <header id=header-overrides>
         <div class="container-fluid">
                 <p id="header-content">Hotel application</p>
@@ -19,7 +18,7 @@
     </header>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-12" id="bootstrap-overrides">  
+            <div class="col-md-12">  
                 <div class="row">
                     <img src="resources/hotel3.jpg" class="col-md-12" alt="Hotel frontdoor">
                 </div>
@@ -29,10 +28,10 @@
                             <div class="row">
                                 <div class="col-md-1"></div>
                                 <li class="col-md-2"><a href="index.html">Home</a></li>
-                                <li class="col-md-2"><a href="/html/rooms.html">Rooms</a></li>
-                                <li class="col-md-2"><a href="/html/client.html">Clients</a></li>
-                                <li class="col-md-2"><a href="/html/activities.html">Avtivities</a></li>
-                                <li class="col-md-2"><a href="/html/support.html">Support</a></li>
+                                <li class="col-md-2"><a href="html/rooms.html">Rooms</a></li>
+                                <li class="col-md-2"><a href="html/client.html">Clients</a></li>
+                                <li class="col-md-2"><a href="html/activities.html">Avtivities</a></li>
+                                <li class="col-md-2"><a href="html/support.html">Support</a></li>
                             </div>
                         </ul>
                     </div>
@@ -71,13 +70,11 @@
             </div>
         </div> 
     </div>
-    <footer class="col-md-12" id="footer-overrides">
-        <div class="container-fluid">
-            <p id="footer-content">
-                Final project, hotel application.
-            </p>
-        </div>
-    </footer>
+    <div class="container-fluid">
+        <footer class="col-md-12" id="footer-overrides">
+            <p id="footer-content">Final project, hotel application.</p>
+        </footer>
+    </div>
 </body>
     
     <script src="js/lib/jquery/jquery-2.1.3.js"></script>
