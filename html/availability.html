@@ -7,24 +7,59 @@
     <title>Check availability</title>
     <link rel="stylesheet" type="text/css" href="../css/reset.css">
     <link rel="stylesheet" type="text/css" href="../css/styleall.css">
+    <link rel="stylesheet" type="text/css" href="../css/availability.css">
+    <link rel="stylesheet" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css">
 </head>
-<body>
-    <h1>Availability</h1>
-    <form>
-        Check-in:<br>
-        <input type="date" name="checkIn"><br>
-        Check-out:<br>
-        <input type="date" name="checkOut"><br>
-        Guests number:<br>
-        <input type="number" name="gusetsnumber"><br>
-        <br>
-        <input type="submit" name="Check availability">
-    </form>
-    <div>
-        <!--Footer-->
-        <p>Final project, hotel application.</p>
+<body id="bootstrap-overrides">
+    <div class="container-fluid">
+        <header id=header-overrides>
+            <div class="container-fluid">
+                <p id="header-content">Hotel application</p>
+            </div>
+        </header>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-11"></div>
+                <a class="btn btn-default btn-lg" role="button" href="../index.html">Home</a>
+            </div>
+        </div>
+        <h1 id="availability-overrides">Availability</h1>
+        <div class="container-fluid">
+            <div class="col-md-1"></div>
+            <div class="col-md-2">
+                <form id="form-overrides">
+                    <div class="form-group">
+                        <label for="checkIn">Check-in:</label>
+                        <input type="date" class="form-control" id="checkIn" placeholder="checkIn" name="checkIn">
+                    </div>
+                    <div class="form-group">
+                        <label for="checkOut">Check-out:</label>
+                        <input type="date" class="form-control" id="checkOut" placeholder="checkOut" name="checkOut">
+                    </div>  
+                    <div class="form-group">
+                        <label for="gusetsnumber">Guests number:</label>
+                        <input type="number" class="form-control" id="gusetsnumber" name="gusetsnumber">
+                    </div>   
+                    <button type="submit" value="Save" class="btn btn-default" name="Check availability">Check</button>
+                </form>
+            </div>
+            <div class="col-md-9"></div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4"></div>
+                <img src="../resources/availability.jpg" class="col-md-4" alt="Room">
+                <div class="col-md-4"></div>
+            </div>
+        </div>
+        <footer class="page-footer" id="footer-overrides">
+            <div class="container-fluid">
+                <div class="row">
+                    <p id="footer-content">Final project, hotel application.</p>
+                </div>
+            </div>
+        </footer>
     </div>
-
     <script src="../js/lib/jquery/jquery-2.1.3.js"></script>
 </body>
 </html>

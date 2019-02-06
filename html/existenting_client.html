@@ -4,29 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Client <!--fa sa pui numele aici--></title>
+    <title>NUME CLIENT <!--atentie--></title>
     <link rel="stylesheet" type="text/css" href="../css/reset.css">
     <link rel="stylesheet" type="text/css" href="../css/styleall.css">
+    <link rel="stylesheet" type="text/css" href="../css/existenting_client.css">
+    <link rel="stylesheet" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css">
 </head>
-<body>
-    <div>
-        <h2><!--nume si prenume client--></h2>
-        <p><!--date client --></p>
-        <p><!--nr camera actuala a clientrului--></p>
-        <ul>
-            <li><!--lista camere in care a stat clientul si datele cand a stat acolo--></li>
-            <li><!--sau buton catre asta--></li>
-        </ul>
+<body id="bootstrap-overrides">
+    <header id=header-overrides>
+        <div class="container-fluid">
+            <p id="header-content">Hotel application</p>
+        </div>
+    </header>
+    <div class="container-fluid">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-11"></div>
+                <a class="btn btn-default btn-lg" role="button" href="../index.html">Home</a>
+            </div>
+        </div>
+        <div>
+            <h2 id="name-overrides">Nume si prenume <!--atentie--></h2>
+            <p id="info-overrides">Data nasterii: <!--atentie--></p>
+            <p id="info-overrides1">CNP: <!--atentie--></p>
+            <p id="info-overrides2">Tip ID: <!--atentie--></p>
+            <p id="info-overrides3">Serie ID: <!--atentie--></p>
+            <p id="info-overrides4">Numar ID: <!--atentie--></p>
+            <p id="info-overrides5">Camera actuala: <!--atentie--></p>
+        </div>
+        <div>
+            <a type="submit" value="Edit" class="btn btn-default" name="Edit client" href="edit_client.html">Edit</a>
+        </div>
+        <div class="container-fluid">
+            <div class="row"> 
+                <div class="col-md-1"></div>  
+                <div>
+                    <img class="col-md-10" src=../resources/hotel2.jpg alt="Receptie 1">
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+        </div>
     </div>
-    <div>
-        <button>Edit client</button>
-        <!--trebuie sa duca la o pagina pentru asta, fa pagina-->
-    </div>
-    <div>
-        <!--Footer-->
-        <p>Final project, hotel application.</p>
-    </div>
-    
+    <footer class="page-footer" id="footer-overrides">
+        <div class="container-fluid">
+            <div class="row">
+                <p id="footer-content">Final project, hotel application.</p>
+            </div>
+        </div>
+    </footer>
+
     <script src="../js/lib/jquery/jquery-2.1.3.js"></script>
 </body>
 </html>
