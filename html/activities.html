@@ -7,18 +7,71 @@
     <title>Activities</title>
     <link rel="stylesheet" type="text/css" href="../css/reset.css">
     <link rel="stylesheet" type="text/css" href="../css/styleall.css">
+    <link rel="stylesheet" type="text/css" href="../css/activities.css">
+    <link rel="stylesheet" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css">
 </head>
-<body>
-    <h1>Here you have a list with all posible activities for the guests of this hotel:</h1>
-    <ul>
-        <a href="activity/{id}.html"><li>Lunch</li></a>
-        <a href="activity/{id}.html"><li>Dinner</li></a>
-        <a href="activity/{id}.html"><li>SPA</li></a>
-        <a href="activity/{id}.html"><li>Massage</li></a>
-    </ul>
-    <div>
-        <!--Footer-->
-        <p>Final project, hotel application.</p>    
+<body id="bootstrap-overrides">
+    <div class="container-fluid">
+        <header id=header-overrides>
+            <div class="container-fluid">
+                    <p id="header-content">Hotel application</p>
+            </div>
+        </header>
+        <div class="container-fluid">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-11"></div>
+                    <a class="btn btn-default btn-lg" role="button" href="../index.html">Home</a>
+                </div>
+            </div>
+            <div>
+                <h1 id=activities-overrides>Here you have a list with all posible activities for the guests of this hotel:</h1>
+            </div>
+            <div class="col-md-12">
+                <p>
+                    &nbsp
+                </p>
+            </div>
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-1">
+                    <a class="btn btn-default btn-lg" role="button" href="activity/{id}.html">Lunch</a>
+                </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-1">
+                    <a class="btn btn-default btn-lg" role="button" href="activity/{id}.html">Dinner</a>
+                </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-1">
+                    <a class="btn btn-default btn-lg" role="button" href="activity/{id}.html">SPA</a>
+                </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-1">
+                    <a class="btn btn-default btn-lg" role="button" href="activity/{id}.html">Massage</a>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <p>
+                    &nbsp
+                </p>
+            </div>
+            <div class="container-fluid">
+                <div class="row"> 
+                    <div class="col-md-1"></div>  
+                    <div>
+                        <img class="col-md-10" src=../resources/activities.jpg alt="Receptie 1">
+                    </div>
+                    <div class="col-md-1"></div>
+                </div>
+            </div>
+        </div>
+        <footer class="page-footer" id="footer-overrides">
+            <div class="container-fluid">
+                <div class="row">
+                    <p id="footer-content">Final project, hotel application.</p>
+                </div>
+            </div>
+        </footer>  
     </div>
 
     <script src="../js/lib/jquery/jquery-2.1.3.js"></script>

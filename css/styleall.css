@@ -14,12 +14,6 @@
     font-size: 300%;
 }
 
-  
-#footer-overrides {
-    bottom: 0;
-    position: fixed;
-}
-
 html {
     background-color: black;
 }
