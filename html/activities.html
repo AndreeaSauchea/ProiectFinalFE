@@ -12,7 +12,7 @@
 </head>
 <body id="bootstrap-overrides">
     <div class="container-fluid">
-        <header id=header-overrides>
+        <header id="header-overrides">
             <div class="container-fluid">
                     <p id="header-content">Hotel application</p>
             </div>
@@ -25,30 +25,15 @@
                 </div>
             </div>
             <div>
-                <h1 id=activities-overrides>Here you have a list with all posible activities for the guests of this hotel:</h1>
+                <h1 id="activities-overrides">Here you have a list with all posible activities for the guests of this hotel:</h1>
             </div>
             <div class="col-md-12">
                 <p>
                     &nbsp
                 </p>
             </div>
-            <div class="row">
-                <div class="col-md-1"></div>
-                <div class="col-md-1">
-                    <a class="btn btn-default btn-lg" role="button" href="activity.html">Lunch</a><!--ATENTIE-->
-                </div>
-                <div class="col-md-1"></div>
-                <div class="col-md-1">
-                    <a class="btn btn-default btn-lg" role="button" href="activity/{id}.html">Dinner</a>
-                </div>
-                <div class="col-md-1"></div>
-                <div class="col-md-1">
-                    <a class="btn btn-default btn-lg" role="button" href="activity/{id}.html">SPA</a>
-                </div>
-                <div class="col-md-1"></div>
-                <div class="col-md-1">
-                    <a class="btn btn-default btn-lg" role="button" href="activity/{id}.html">Massage</a>
-                </div>
+            <div class="row" id="activities">
+                
             </div>
             <div class="col-md-12">
                 <p>
@@ -75,6 +60,7 @@
     </div>
 
     <script src="../js/lib/jquery/jquery-2.1.3.js"></script>
-    
+    <script src="../js/activities.js"></script>
+
 </body>
 </html>
