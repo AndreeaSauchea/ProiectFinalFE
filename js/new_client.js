@@ -1,5 +1,5 @@
 var API_URL = {
-    CREATE: 'http://localhost:8080//clients'
+    CREATE: 'http://localhost:8080/clients'
 };
 
 window.NewClient = {

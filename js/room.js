@@ -111,21 +111,6 @@ window.Room = {
             Room.delete(activityId);
         });
 
-
-       /* $( ".add-form" ).submit(function() {
-            const person = {
-                firstName: $('input[name=firstName]').val(),
-                lastName: $('input[name=lastName]').val(),
-                phone: $('input[name=phone]').val()
-            };
-
-            if (editId) {
-                person.id = editId;
-                PhoneBook.save(person);
-            } else {
-                PhoneBook.add(person);
-            }
-        });*/
     },
 
     
@@ -227,4 +212,3 @@ var client;
 var totalPrice;
 Room.load();
 Room.getBookedRoom();
-//Room.getBill();
