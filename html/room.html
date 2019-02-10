@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Room number<!--atentie--></title>
+    <title>Room</title>
     <link rel="stylesheet" type="text/css" href="../css/reset.css">
     <link rel="stylesheet" type="text/css" href="../css/styleall.css">
     <link rel="stylesheet" type="text/css" href="../css/room.css">
@@ -52,27 +52,28 @@
                 </div>
                 <div class="col-md-9"></div>
             </div>
-        <!--if booked-->
         <div id="booked">
-                <p id="client_room-overrides">Client: <!--atentie--></p>
+                <p id="client_room-overrides">Client: </p>
                 <p id="client"></p>
-                <p id="info-overrides2">Duration: <!--atentie--></p>
+                <p id="info-overrides2">Duration: </p>
                 <p id="duration"></p>
                 <div class="table-responsive">
+                    <form class="add-form" action="" onsubmit="return false" method="put">
                     <table id="table-overrides" class="table table-striped table-bordered">
-                        <thead>
-                            <tr>
-                                <th>Activity name</th>
-                                <th>Price</th>
-                                <th width="100">Actions</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                        <!--Sa il faci editabil-->
-                            </tbody>
-                    </table>
+                            <thead>
+                                <tr>
+                                    <th>Activity name</th>
+                                    <th>Price</th>
+                                    <th width="100">Actions</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                            
+                                </tbody>
+                        </table>
+                    </form>
                 </div>
-                <button type="submit" value="Save" class="btn btn-default">Generare factura</button>
+                <button id="bill" type="submit" value="Save" class="btn btn-default" onclick="Room.getBill();">Generate bill</button>
         </div>
     </div>
     <div class="col-md-12">
@@ -96,6 +97,7 @@
     </footer>
 
     <script src="../js/lib/jquery/jquery-2.1.3.js"></script>
+    <script src="../js/lib/jsPDF.js"></script>
     <script src="../js/room.js"></script>
 </body>
 </html>
