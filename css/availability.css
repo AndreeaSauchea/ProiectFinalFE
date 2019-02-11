@@ -1,3 +1,9 @@
 #availability-overrides{
     color: rgb(223, 147, 6);
 }
+
+
+#table-overrides{
+    color: rgb(223, 147, 6);
+    font-size: 150%;
+}

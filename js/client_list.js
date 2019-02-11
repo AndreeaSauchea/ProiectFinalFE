@@ -31,6 +31,7 @@ window.ClientsHistory = {
         historyList.forEach(client => rows += ClientsHistory.getRow(client));
         $('#table-overrides tbody').html(rows);
     }
+
 };
 
 console.info('loading persons');
