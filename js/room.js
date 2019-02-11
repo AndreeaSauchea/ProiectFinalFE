@@ -99,6 +99,7 @@ window.Room = {
             url: API_URL.ADD.replace("{roomId}", roomId).replace("{activityId}", newActivityId),
             method: "PUT"
         }).done(function () { 
+            location.reload(true);
         });
     },
 
@@ -153,7 +154,7 @@ window.Room = {
     setPrice: function(selectObject){
         newActivityId = selectObject.value;
         var price;
-        console.info('service mata', newServices);
+        console.info('service list', newServices);
         newServices.forEach(service => {
             if(service.id == newActivityId) {
                 price = service.servicePrice;

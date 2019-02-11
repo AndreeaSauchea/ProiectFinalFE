@@ -1,9 +1,9 @@
-#lastname-overrides,#firstname-overrides,#lastname,#firstname{
+#lastname-overrides,#firstname-overrides,#name,#forename{
     color: rgb(223, 147, 6);
     font-size: 300%;
 }
 
-#info-overrides,#info-overrides1,#info-overrides2,#info-overrides3,#info-overrides4,#info-overrides5,#birthday,#cnp,#TypeID,#SeriesID,#NumberID,#room{
+#info-overrides,#info-overrides1,#info-overrides2,#info-overrides3,#info-overrides4,#info-overrides5,#birthday,#cnp,#typeID,#seriesID,#numberID,#room{
     color: rgb(223, 147, 6);
     font-size: 100%;
 }

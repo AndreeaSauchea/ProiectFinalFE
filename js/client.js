@@ -4,7 +4,7 @@ window.Client = {
         $("#btn").click( function() {
             console.info("we are here")
             var url = "existenting_client.html?cnp=" + $("#cnp").val();
-            console.info("we might have done sth wit cnp", $("#cnp").val())
+            console.info("we might have done sth with cnp", $("#cnp").val())
             window.open(url, "_self");
         });
     }

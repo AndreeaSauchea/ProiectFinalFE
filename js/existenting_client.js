@@ -21,13 +21,13 @@ window.ExistingClient = {
     },
 
    display: function(existClient) {
-        $('#lastname').html(existClient.name);
-        $('#firstname').html(existClient.forename);
+        $('#name').html(existClient.name);
+        $('#forename').html(existClient.forename);
         $('#birthday').html(existClient.birthday);
         $('#cnp').html(existClient.cnp);
-        $('#TypeID').html(existClient.typeID);
-        $('#SeriesID').html(existClient.seriesID);
-        $('#NumberID').html(existClient.numberID);
+        $('#typeID').html(existClient.typeID);
+        $('#seriesID').html(existClient.seriesID);
+        $('#numberID').html(existClient.numberID);
     },
 
     getBookedRoom: function(existClient){
@@ -63,5 +63,19 @@ window.ExistingClient = {
         $('#room').html(bookedroom.room);
     },
 
+
+    send: function(){
+        $("#btn").click( function() {
+            console.info("we are here")
+            var url = "edit_client.html?cnp=" + document.getElementById("cnp").innerHTML + "&name=" + document.getElementById("name").innerHTML + "&forename=" + document.getElementById("forename").innerHTML + "&birthday=" + document.getElementById("birthday").innerHTML + "&typeID=" + document.getElementById("typeID").innerHTML + "&seriesID=" + document.getElementById("seriesID").innerHTML + "&numberID=" + document.getElementById("numberID").innerHTML;
+            console.info("we might have done sth wit cnp", document.getElementById("cnp").innerHTML)
+            window.open(url, "_self");
+        });
+    }
+    
+
 }
 ExistingClient.load();
+console.info("I am here");
+ExistingClient.send();
+console.info("Now I am here");
