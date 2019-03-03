@@ -3,7 +3,7 @@
     font-size: 300%;
 }
 
-#info-overrides,#info-overrides1,#info-overrides2,#info-overrides3,#info-overrides4,#info-overrides5,#birthday,#cnp,#typeID,#seriesID,#numberID,#room{
+#info-overrides,#info-overrides1,#info-overrides2,#info-overrides3,#info-overrides4,#info-overrides5,#info-overrides6,#info-overrides7,#birthday,#cnp,#typeID,#seriesID,#numberID,#room,#street,#streetNumber{
     color: rgb(223, 147, 6);
     font-size: 100%;
 }

@@ -11,7 +11,11 @@ window.ExistingClient = {
         console.info('cnp works', cnp);
         $.ajax({
             url: API_URL.READ + cnp,
-            method: "GET"
+            method: "GET",
+            error: function(xhr, status, error){
+                console.info("something is wrong", xhr);
+                alert('Request Status: ' + xhr.status + ' Status Text: ' + xhr.responseJSON.message);
+            } 
         }).done(function (existClient) {
             console.info('done: existClient', existClient);
 
@@ -28,6 +32,8 @@ window.ExistingClient = {
         $('#typeID').html(existClient.typeID);
         $('#seriesID').html(existClient.seriesID);
         $('#numberID').html(existClient.numberID);
+        $('#street').html(existClient.street);
+        $('#streetNumber').html(existClient.streetNumber);
     },
 
     getBookedRoom: function(existClient){
@@ -43,6 +49,10 @@ window.ExistingClient = {
         $.ajax({
             url: API_URL.READBOOKED + id,
             method: "GET",
+            error: function(xhr, status, error){
+                console.info("something is wrong", xhr);
+                alert('Request Status: ' + xhr.status + ' Status Text: ' + xhr.responseJSON.message);
+            } 
         }).done(function (bookedroom) {
             console.info('done: bookedroom', bookedroom);
             var x = document.getElementById("booked");
@@ -67,7 +77,7 @@ window.ExistingClient = {
     send: function(){
         $("#btn").click( function() {
             console.info("we are here")
-            var url = "edit_client.html?cnp=" + document.getElementById("cnp").innerHTML + "&name=" + document.getElementById("name").innerHTML + "&forename=" + document.getElementById("forename").innerHTML + "&birthday=" + document.getElementById("birthday").innerHTML + "&typeID=" + document.getElementById("typeID").innerHTML + "&seriesID=" + document.getElementById("seriesID").innerHTML + "&numberID=" + document.getElementById("numberID").innerHTML;
+            var url = "edit_client.html?cnp=" + document.getElementById("cnp").innerHTML + "&name=" + document.getElementById("name").innerHTML + "&forename=" + document.getElementById("forename").innerHTML + "&birthday=" + document.getElementById("birthday").innerHTML + "&typeID=" + document.getElementById("typeID").innerHTML + "&seriesID=" + document.getElementById("seriesID").innerHTML + "&numberID=" + document.getElementById("numberID").innerHTML + "&street=" + document.getElementById("street").innerHTML + "&streetNumber=" + document.getElementById("streetNumber").innerHTML;
             console.info("we might have done sth wit cnp", document.getElementById("cnp").innerHTML)
             window.open(url, "_self");
         });

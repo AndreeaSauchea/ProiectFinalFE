@@ -13,7 +13,11 @@ window.Rooms = {
     load: function () {
         $.ajax({
             url: API_URL.READ,
-            method: "GET"
+            method: "GET",
+            error: function(xhr, status, error){
+                console.info("something is wrong", xhr);
+                alert('Request Status: ' + xhr.status + ' Status Text: ' + xhr.responseJSON.message);
+            } 
         }).done(function (rooms) {
             console.info('done: rooms', rooms);
 

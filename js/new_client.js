@@ -37,7 +37,11 @@ window.NewClient = {
                 console.info ('We made it'),
                 alert('New client was created');
                 location.reload(true);
-              }
+              },
+              error: function(xhr, status, error){
+                console.info("something is wrong", xhr);
+                alert('Request Status: ' + xhr.status + ' Status Text: ' + xhr.responseJSON.message);
+            } 
         }).done(function (response) {
             if (response.success) {
                 console.info('person', response);

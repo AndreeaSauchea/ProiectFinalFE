@@ -13,6 +13,8 @@ window.EditClient = {
         const typeID = urlParams.get('typeID');
         const seriesID = urlParams.get('seriesID');
         const numberID = urlParams.get('numberID');
+        const street = urlParams.get('street');
+        const streetNumber = urlParams.get('streetNumber');
         console.info('name works', name);
         console.info('forename works', forename);
         console.info('birthday works', birthday);
@@ -20,13 +22,15 @@ window.EditClient = {
         console.info('seriesID works', seriesID);
         console.info('numberID works', numberID);
         console.info('cnp works', cnp);
+        console.info('street works', street);
+        console.info('street number works', streetNumber);
 
-        EditClient.display(cnp, name, forename, birthday, typeID, numberID, seriesID);
+        EditClient.display(cnp, name, forename, birthday, typeID, numberID, seriesID, street, streetNumber);
         EditClient.getInfo();
        
     },
 
-    display: function(cnp, name, forename, birthday, typeID, numberID, seriesID){
+    display: function(cnp, name, forename, birthday, typeID, numberID, seriesID, street, streetNumber){
         console.info('cnp works', cnp);
         document.getElementById("cnp").value = cnp;
         document.getElementById("name").value = name;
@@ -35,6 +39,8 @@ window.EditClient = {
         document.getElementById("typeID").value = typeID;
         document.getElementById("seriesID").value = seriesID;
         document.getElementById("numberID").value = numberID;
+        document.getElementById("street").value = street;
+        document.getElementById("streetNumber").value = streetNumber;
     },
 
     getInfo: function(){
@@ -47,6 +53,8 @@ window.EditClient = {
                 typeID: $('input[name=typeID]').val(),
                 seriesID: $('input[name=seriesID]').val(),
                 numberID: $('input[name=numberID]').val(),
+                street: $('input[name=street]').val(),
+                streetNumber: $('input[name=streetNumber]').val(),
             };
 
             console.info("we made it to here", client)
@@ -68,8 +76,12 @@ window.EditClient = {
             success: function() {
                 console.info ('We made it'),
                 alert('Edited client');
-             //   location.reload(true);
-              }
+               location.reload(true);
+              },
+              error: function(xhr, status, error){
+                console.info("something is wrong", xhr);
+                alert('Request Status: ' + xhr.status + ' Status Text: ' + xhr.responseJSON.message);
+            } 
         }).done(function (response) {
             if (response.success) {
                 console.info('person', response);

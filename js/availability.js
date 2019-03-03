@@ -29,7 +29,11 @@ window.Availability = {
             data: JSON.stringify(available, null, 2),
             success: function() {
                 console.info ('We made it')
-              }
+            },
+            error: function(xhr, status, error){
+                console.info("something is wrong", xhr);
+                alert('Request Status: ' + xhr.status + ' Status Text: ' + xhr.responseJSON.message);
+            } 
         }).done(function (response) {
                 console.info('camere', response);
                 if(response.length == 0){

@@ -7,7 +7,7 @@ window.ClientsHistory = {
         return `<tr>
             <td>${client.firstName}</td>
             <td>${client.lastName}</td>
-            <td>${client.room}</td>
+            <td><a class="btn btn-default btn-lg" role="button" href="room.html?id=${client.roomId}">Room ${client.room}</a></td>
             <td>${client.checkIn}</td>
             <td>${client.checkOut}</td>
         </tr>`;
@@ -16,7 +16,11 @@ window.ClientsHistory = {
     load: function () {
         $.ajax({
             url: API_URL.READ,
-            method: "GET"
+            method: "GET",
+            error: function(xhr, status, error){
+                console.info("something is wrong", xhr);
+                alert('Request Status: ' + xhr.status + ' Status Text: ' + xhr.responseJSON.message);
+            } 
         }).done(function (historyList) {
             console.info('done: history', historyList);
 

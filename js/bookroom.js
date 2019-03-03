@@ -1,5 +1,5 @@
 var API_URL = {
-    CREATE: 'http://localhost:8080/bookedrooms'
+    CREATE: 'http://localhost:8080/bookedroom'
 };
 
 window.BookRoom = {
@@ -35,8 +35,9 @@ window.BookRoom = {
                 alert('Booked a room');
                 location.reload(true);
               },
-            error: function(err){
-                console.info("something is wrong", err);
+            error: function(xhr, status, error){
+                console.info("something is wrong", xhr);
+                alert('Request Status: ' + xhr.status + ' Status Text: ' + xhr.responseJSON.message);
             } 
         }).done(function (response) {
             if (response.success) {

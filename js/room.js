@@ -15,7 +15,11 @@ window.Room = {
         console.info('id works', id);
         $.ajax({
             url: API_URL.READ + id,
-            method: "GET"
+            method: "GET",
+            error: function(xhr, status, error){
+                console.info("something is wrong", xhr);
+                alert('Request Status: ' + xhr.status + ' Status Text: ' + xhr.responseJSON.message);
+            } 
         }).done(function (room) {
             console.info('done: room', room);
 
@@ -36,7 +40,7 @@ window.Room = {
         console.info('roomId works', id)
         $.ajaxSetup({
             error: function(xhr){
-                alert('Request Status: ' + xhr.status + ' Status Text: Room is not booked' );
+                alert('Request Status: ' + xhr.status +  ' Status Text: ' + xhr.responseJSON.message );
                 var x = document.getElementById("booked");
                 x.style.display = "none";
             }
@@ -86,6 +90,7 @@ window.Room = {
             url: API_URL.REMOVE.replace("{roomId}", roomId).replace("{activityId}", activityId),
             method: "PUT"
         }).done(function () { 
+            location.reload(true);
         });
     },
 
@@ -127,7 +132,11 @@ window.Room = {
     loadService: function (bookedroom) {
         $.ajax({
             url: API_URL.GETSERVICES,
-            method: "GET"
+            method: "GET",
+            error: function(xhr, status, error){
+                console.info("something is wrong", xhr);
+                alert('Request Status: ' + xhr.status + ' Status Text: ' + xhr.responseJSON.message);
+            } 
         }).done(function (newServiceList) {
             console.info('done: serviceList', newServiceList);
             Room.displayActivities(bookedroom.serviceList, newServiceList);
