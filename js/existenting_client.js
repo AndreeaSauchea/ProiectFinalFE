@@ -52,6 +52,8 @@ window.ExistingClient = {
             error: function(xhr, status, error){
                 console.info("something is wrong", xhr);
                 alert('Request Status: ' + xhr.status + ' Status Text: ' + xhr.responseJSON.message);
+                var x = document.getElementById("booked");
+                x.style.display = "none";
             } 
         }).done(function (bookedroom) {
             console.info('done: bookedroom', bookedroom);
