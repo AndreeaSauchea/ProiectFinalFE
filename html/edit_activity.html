@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Edit activity</title>
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/styleall.css">
+    <link rel="stylesheet" type="text/css" href="../css/edit_activity.css">
+    <link rel="stylesheet" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css">
+</head>
+<body id="bootstrap-overrides">
+    <header id=header-overrides>
+        <div class="container-fluid">
+            <p id="header-content">Hotel application</p>
+        </div>
+    </header>
+        <div class="container-fluid">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-7"></div>
+                    <a class="btn btn-default btn-lg" role="button" href="../index.html">Home</a>
+                    <div class="col-md-1"></div>
+                    <a class="btn btn-default btn-lg" role="button" href="../html/activities.html">Activities</a>
+                </div>
+            </div>
+            <div>
+                <h2 id="edit_activityoverrides">Edit activity</h2>
+                <h2 id="name"></h2>
+                <div class="col-md-1"></div>
+                <div class="col-md-3">
+                    <form id="form-overrides" class="add-form" onsubmit="return false">
+                        <div class="form-group">
+                            <label for="name">Duration: </label>
+                            <input type="number" class="form-control" id="serviceDuration" placeholder="serviceDuration" name="serviceDuration">
+                        </div>  
+                        <div class="form-group">
+                            <label for="number_of_places">Price: </label>
+                            <input type="number" class="form-control" id="servicePrice" placeholder="servicePrice" name="servicePrice">
+                        </div>   
+                        <button type="submit" value="Save" class="btn btn-default">Edit</button>
+                    </form>
+                </div>
+                <div class="col-md-8"></div>
+    </div>
+    <div class="col-md-12">
+        <p>
+            &nbsp
+        </p>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <img src="../resources/activities.jpg" class="col-md-6" alt="activity">
+            <div class="col-md-3"></div>
+        </div>
+    </div>
+    <footer class="page-footer" id="footer-overrides">
+        <div class="container-fluid">
+            <div class="row">
+                <p id="footer-content">Final project, hotel application.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/lib/jquery/jquery-2.1.3.js"></script>
+    <script src="../js/lib/jsPDF.js"></script>
+    <script src="../js/edit_activity.js"></script>
+</body>
+</html>

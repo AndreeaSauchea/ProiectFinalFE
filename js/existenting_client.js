@@ -50,7 +50,7 @@ window.ExistingClient = {
             url: API_URL.READBOOKED + id,
             method: "GET",
             error: function(xhr, status, error){
-                console.info("something is wrong", xhr);
+                console.info("no bookedroom", xhr);
                 alert('Request Status: ' + xhr.status + ' Status Text: ' + xhr.responseJSON.message);
                 var x = document.getElementById("booked");
                 x.style.display = "none";
@@ -80,10 +80,11 @@ window.ExistingClient = {
         $("#btn").click( function() {
             console.info("we are here")
             var url = "edit_client.html?cnp=" + document.getElementById("cnp").innerHTML + "&name=" + document.getElementById("name").innerHTML + "&forename=" + document.getElementById("forename").innerHTML + "&birthday=" + document.getElementById("birthday").innerHTML + "&typeID=" + document.getElementById("typeID").innerHTML + "&seriesID=" + document.getElementById("seriesID").innerHTML + "&numberID=" + document.getElementById("numberID").innerHTML + "&street=" + document.getElementById("street").innerHTML + "&streetNumber=" + document.getElementById("streetNumber").innerHTML;
-            console.info("we might have done sth wit cnp", document.getElementById("cnp").innerHTML)
+            console.info("we might have done sth with cnp", document.getElementById("cnp").innerHTML)
+            console.info(url);
             window.open(url, "_self");
         });
-    }
+    },
     
 
 }

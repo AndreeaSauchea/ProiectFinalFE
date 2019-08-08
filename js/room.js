@@ -30,8 +30,8 @@ window.Room = {
 
     display: function(room) {
         $('#name').html(room.roomNumber);
-        $('#places').html(room.numberPlaces);
-        $('#price').html(room.nightlyPrice);
+        $('#numberPlaces').html(room.numberPlaces);
+        $('#nightlyPrice').html(room.nightlyPrice);
     },
 
     getBookedRoom: function(){
@@ -211,6 +211,16 @@ window.Room = {
 
         doc.save(`${client}.pdf`);
     },
+
+    send: function(){
+        $("#edit").click( function() {
+            console.info("we are here")
+            var url = "edit_room.html?name=" + document.getElementById("name").innerHTML  + "&nightlyPrice=" + document.getElementById("nightlyPrice").innerHTML + "&numberPlaces=" + document.getElementById("numberPlaces").innerHTML;
+            console.info("we might have done sth with roomNumber", document.getElementById("name").innerHTML);
+            console.info(url);
+            window.open(url, "_self");
+        });
+    },
     
 }
 
@@ -221,4 +231,7 @@ var newActivityId;
 var client;
 var totalPrice;
 Room.load();
+console.info('I am here');
 Room.getBookedRoom();
+Room.send();
+console.info('bla bla bla');

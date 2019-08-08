@@ -76,7 +76,7 @@ window.EditClient = {
             success: function() {
                 console.info ('We made it'),
                 alert('Edited client');
-               location.reload(true);
+                window.open("existenting_client.html?cnp=" + document.getElementById("cnp").value, "_self");
               },
               error: function(xhr, status, error){
                 console.info("something is wrong", xhr);
